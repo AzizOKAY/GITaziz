@@ -10,11 +10,21 @@
  */
 class Tutor extends User{
     
-    @Override
+    /**
+     * 
+     * @param theName name of user that we define
+     * @param theId id of user that we user
+     * @param theMail mail of user that we user
+     * @param thePassword password of user that we user
+     */
+    public Tutor(String theName, String theId, String theMail, String thePass){
+        super(theName, theId, theMail, thePass);
+    }
     /**
      * Function that print information about user on screen
      */
-    public void printUserInformation(){
+    @Override
+    public void UserProfil(){
         System.out.println("Mereba This function print tutor information");
     }
 }

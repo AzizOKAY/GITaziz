@@ -10,11 +10,21 @@
  */
 class Teacher extends User{
     
+    /**
+     * 
+     * @param theName name of user that we define
+     * @param theId id of user that we user
+     * @param theMail mail of user that we user
+     * @param thePassword password of user that we user
+     */
+    public Teacher(String theName, String theId, String theMail, String thePass){
+        super(theName, theId, theMail, thePass);
+    }
     @Override
     /**
      * Function that print information about user on screen
      */
-    public void printUserInformation(){
+    public void UserProfil(){
         System.out.println("Mereba ");
     }
     

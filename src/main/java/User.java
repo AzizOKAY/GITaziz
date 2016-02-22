@@ -14,6 +14,31 @@ abstract class User {
     private String id;
     private String mail;
     private String password;
+    
+    /**
+     * Constructor for user
+     * @param theName name of user that we define
+     * @param theId id of user that we user
+     */
+    public User(String theName, String theId){
+        name = theName;
+        id = theId;
+    }
+    
+    /**
+     * 
+     * @param theName name of user that we define
+     * @param theId id of user that we user
+     * @param theMail mail of user that we user
+     * @param thePassword password of user that we user
+     */
+    public User(String theName, String theId, String theMail, String thePassword){
+        name = theName;
+        id = theId;
+        mail = theMail;
+        password = thePassword;
+    }
+    
     /**
      * Getter function that return name of user
      * @return name of user
@@ -39,12 +64,28 @@ abstract class User {
     }
     
     /**
-     * Getter function that return password of user
-     * @return password of user
+     * Setter function to set name of User
+     * @param newName string to set name of user
      */
-    public String getPassword(){
-        return password;
-    } 
+    public void setName(String newName){
+        name = newName;
+    }
+    
+    /**
+     * Setter function to set id of User
+     * @param newId new id of User
+     */
+    public void setID(String newId){
+        id = newId;
+    }
+    
+    /**
+     * Setter function to set mail address of User
+     * @param newMail new mail address
+     */
+    public void setMail(String newMail){
+        mail = newMail;
+    }
     
     /**
      * 
@@ -60,7 +101,7 @@ abstract class User {
     /**
      * Abstract function that print information about user on screen
      */
-    public abstract void printUserInformation();
+    public abstract void UserProfil();
     
     
 }
