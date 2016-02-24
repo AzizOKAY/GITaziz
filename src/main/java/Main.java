@@ -17,8 +17,8 @@ public class Main {
     
     public static void main(String[] args){
         java.io.File file = new java.io.File("data.txt");
-        Date dline = new Date("2016-3-3");
-        Date lateDline = new Date("2016-4-3");
+        Date dline = new Date(2016, 3, 3, 6, 2);
+        Date lateDline = new Date(2016, 3, 7, 3, 1);
     
         try{
             Scanner input = new Scanner(file);

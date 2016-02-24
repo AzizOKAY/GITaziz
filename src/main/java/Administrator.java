@@ -51,17 +51,18 @@ class Administrator extends User{
      * @return 
      */
     public boolean addUser(User theUser){
-       boolean result = false;
+       boolean result = true;
         try{
             for(int i = 0; i < getUserList().size(); i++){
                 if(theUser.getId() == getUserList().get(i)){
-                    result = true;
+                    result = false;
                 } 
+            }    
                 if(result != true)
                     throw new UserException();
                 else
-                    getUserList().remove(i);
-            }
+                    getUserList().add(theUser);
+            
         }
         catch(UserException e){
             System.out.println(theUser.getName() + e.alreadyExist());
