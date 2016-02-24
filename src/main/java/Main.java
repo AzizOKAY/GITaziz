@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Main {
     
-    public static void main(){
+    public static void main(String[] args){
         java.io.File file = new java.io.File("data.txt");
     
         try{
@@ -27,10 +27,14 @@ public class Main {
         catch(FileNotFoundException e){
             System.err.format("File does not exist.\n");
         }
+        
+        Teacher teacher1 = new Teacher("Erdogan", "101044012", "erdogan@mail.com", "erdo123");
+        Student stdd = new Student("Ergan", "1010412", "erdoan@mail.com", "erdo123");
+        
+        stdd.UserProfil();
     }
     
-    Teacher teacher1 = new Teacher("Erdogan", "101044012", "erdogan@mail.com", "erdo123");
-    Student stdd = new Student("Ergan", "1010412", "erdoan@mail.com", "erdo123");
+    
     
     
     
