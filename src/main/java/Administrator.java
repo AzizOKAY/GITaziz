@@ -97,7 +97,7 @@ class Administrator extends User{
      * @param theCourse the course will be add the system
      * @return true if added false otherwise
      */
-    public boolean addCourse(Course theCourse){
+    public boolean createCourse(Course theCourse){
         boolean result = false;
         try{
             for(int i = 0; i < getCourseList().size(); i++){

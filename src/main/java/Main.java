@@ -29,7 +29,7 @@ public class Main {
         }
         
         Teacher teacher1 = new Teacher("Erdogan", "101044012", "erdogan@mail.com", "erdo123");
-        Student stdd = new Student("Ergan", "1010412", "erdoan@mail.com", "erdo123");
+        Student stdd = new Student("Aziz", "101044064", "okayaziz@amail.com", "ezizjan");
         
         stdd.UserProfil();
     }
