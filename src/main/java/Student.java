@@ -15,11 +15,13 @@ public class Student extends User{
      * @param theName name of user that we define
      * @param theId id of user that we user
      * @param theMail mail of user that we user
-     * @param thePassword password of user that we user
+     * @param thePass password of user for login system
      */
     public Student(String theName, String theId, String theMail, String thePass){
         super(theName, theId, theMail, thePass);
     }
+    
+    
     /**
      * Function that print information about user on screen
      */

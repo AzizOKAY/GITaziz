@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,6 +17,7 @@ abstract class User {
     private String id;
     private String mail;
     private String password;
+    private ArrayList<User> userList;
     
     /**
      * Constructor for user
@@ -24,6 +28,7 @@ abstract class User {
         name = theName;
         id = theId;
     }
+    
     
     /**
      * 
@@ -46,6 +51,10 @@ abstract class User {
     public String getName(){
         return name;
     }
+    
+    public ArrayList getUserList(){
+        return userList;
+    } 
     
     /**
      * Getter function that return id of user
@@ -102,6 +111,7 @@ abstract class User {
      * Abstract function that print information about user on screen
      */
     public abstract void UserProfil();
+    
     
     
 }

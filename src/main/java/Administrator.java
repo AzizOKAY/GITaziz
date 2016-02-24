@@ -20,11 +20,40 @@ class Administrator extends User{
     public Administrator(String theName, String theId, String theMail, String thePass){
         super(theName, theId, theMail, thePass);
     }
+    
+    
     @Override
     /**
      * Function that print information about user on screen
      */
     public void UserProfil(){
         System.out.println("Mereba ");
+    }
+    
+    public void add(User theUser){
+        getUserList().add(theUser);
+    }
+    
+    /**
+     * 
+     * @param theUser that will remove if exist
+     * @return true if user exist false otherwise
+     */
+    public boolean remove(User theUser){
+        boolean result = false;
+        try{
+            for(int i = 0; i < getUserList().size(); i++){
+                if(theUser.getId() == getUserList().get(i)){
+                    getUserList().remove(i);
+                    result = true;
+                } 
+                if(result != true)
+                    throw new UserException();
+            }
+        }
+        catch(UserException e){
+            System.out.println(e.noSuchUser());
+        }
+        return result;
     }
 }

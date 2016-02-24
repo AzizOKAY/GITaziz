@@ -17,8 +17,14 @@ public class Course {
     private String courseID;
     private Teacher courseTeacher;
     private ArrayList<Tutor> courseTutorList;
-    private ArrayList<Student> studentTutorList;
+    private ArrayList<Student> studentList;
     
+    /**
+     * 
+     * @param nameOfCourse The name of course
+     * @param theCourseID Course id
+     * @param theCourseTeacher Course teacher
+     */
     public Course(String nameOfCourse, String theCourseID, Teacher theCourseTeacher){
         name = nameOfCourse;
         courseID = theCourseID;
@@ -57,6 +63,23 @@ public class Course {
     public String getCourseId(){
         return courseID;
     }
+    
+    /**
+     * Getter function for get list of student that pupil of course
+     * @return student list of course
+     */
+    public ArrayList getStudentList(){
+        return studentList;
+    }
+    
+    /**
+     * Getter function for get teacher of this course
+     * @return teacher of this course
+     */
+    public Teacher getTeacherOfCourse(){
+        return courseTeacher;
+    }
+    
     /**
      * Function that print information about course
      */
@@ -70,7 +93,9 @@ public class Course {
             System.out.println(i+1 + ". " + courseTutorList.get(i).getName());
         
         System.out.println("*** Student of Course *** ");
-        for(int i = 0; i < studentTutorList.size(); i++)
-            System.out.println(i+1 + ". " + studentTutorList.get(i).getName());
+        for(int i = 0; i < studentList.size(); i++)
+            System.out.println(i+1 + ". " + studentList.get(i).getName());
     }
+
+    
 }
