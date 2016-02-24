@@ -6,9 +6,9 @@
 
 /**
  *
- * @author jan
+ * @author Aziz OKAY
  */
-class Teacher extends User{
+public class Teacher extends User{
     
     /**
      * 
