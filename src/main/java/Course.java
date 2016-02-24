@@ -73,6 +73,15 @@ public class Course {
     }
     
     /**
+     * Getter function for get list of tutor that tutor of course
+     * @return get tutor list of course
+     */
+    public ArrayList getTutorList(){
+        return courseTutorList;
+    }
+    
+    
+    /**
      * Getter function for get teacher of this course
      * @return teacher of this course
      */

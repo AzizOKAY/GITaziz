@@ -5,7 +5,7 @@
  */
 
 /**
- *
+ *Class that extends Exception class for special error
  * @author Aziz OKAY
  */
 public class UserException extends Exception{
@@ -19,15 +19,23 @@ public class UserException extends Exception{
     }
     
     /**
-     * 
+     * Function that return massage if there is no such a user
      * @return error massage if wrong teacher
      */
     public String wrongTeacher(){
         return "Wrong Teacher Error : Teacher do not have this course.";
     }
     
+    /**
+     * Function that return massage if there is all ready exist 
+     * @return error string massage
+     */
     public String allreadyExist(){
-        return "This User is allready exist in this course.";
+        return " is allready exist in this list.";
+    }
+    
+    public String noSuchCourse(){
+        return "There is no such course.";
     }
     
     

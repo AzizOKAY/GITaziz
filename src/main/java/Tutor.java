@@ -25,6 +25,9 @@ class Tutor extends User{
      */
     @Override
     public void UserProfil(){
-        System.out.println("Mereba This function print tutor information");
+        System.out.println(" ***** TUTOR PROFIL ***** ");
+        System.out.println("ID : " + this.getId());
+        System.out.println("NAME : " + this.getName());
+        System.out.println("Mail Address : " + this.getMail());
     }
 }
