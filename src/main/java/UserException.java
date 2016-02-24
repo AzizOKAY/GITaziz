@@ -34,12 +34,24 @@ public class UserException extends Exception{
         return " is allready exist in this list.";
     }
     
+    /**
+     * Function that return massage if there is no such a course
+     * @return error string massage
+     */
     public String noSuchCourse(){
         return "There is no such course.";
     }
     
+    /**
+     * Function that return massage if invalid password entered
+     * @return error string massage
+     */
     public String invalidPassword(){
         return "Invalid password!!!";
+    }
+    
+    public String invalidDate(){
+        return "Invalid date entered please try again!!!";
     }
     
     

@@ -1,3 +1,6 @@
+
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -162,6 +165,25 @@ public class Teacher extends User{
         }
         catch(UserException e){
             System.out.println(e.wrongTeacher());
+        }
+        return result;
+    }
+    
+    public Assignment createAssignment(Course theCourse, Date theDeadLine, 
+            Date theLateDeadLine, String theformat){
+        
+        Assignment result;
+        Date date = new Date();
+        try{
+            if(date.before(theDeadLine) && date.before(theLateDeadLine)){
+                result = new Assignment(this, theCourse, theDeadLine, theLateDeadLine, theformat);
+            }
+            else
+                throw new UserException();
+        }
+        catch(UserException e){
+            System.out.println(e.invalidDate());
+            result = null;
         }
         return result;
     }

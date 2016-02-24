@@ -1,3 +1,6 @@
+
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -32,5 +35,23 @@ public class Student extends User{
         System.out.println("NAME : " + this.getName());
         System.out.println("Mail Address : " + this.getMail());
         
+    }
+    
+    public boolean uploadAssignment(Assignment uploadAssgnmnt){
+        boolean result = false;
+        Date date = new Date();
+        try{
+            if(date.before(uploadAssgnmnt.getDeadline()) && date.before(uploadAssgnmnt.getLateDaedLine())){
+                System.out.println("You can upload your work.");
+            }
+            else
+                throw new UserException();
+        }
+        catch(UserException e){
+            System.out.println("Assignment is overdue!!!");
+            result = false;
+        }
+        
+        return result;
     }
 }
