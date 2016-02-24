@@ -42,7 +42,8 @@ public class Student extends User{
         Date date = new Date();
         try{
             if(date.before(uploadAssgnmnt.getDeadline()) && date.before(uploadAssgnmnt.getLateDaedLine())){
-                System.out.println("You can upload your work.");
+                
+                System.out.println("Operation is successfuly complated.");
             }
             else
                 throw new UserException();
