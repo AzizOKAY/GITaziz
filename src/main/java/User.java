@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author jan
  */
-abstract class User {
+abstract class User implements UserInterface{
     
     private String name;
     private String id;
@@ -111,6 +112,78 @@ abstract class User {
      * Abstract function that print information about user on screen
      */
     public abstract void UserProfil();
+    
+    /**
+     * Function to user change his/her name
+     * @return true if operation success false otherwise
+     */
+    @Override
+    public boolean changeName(String newName){
+        boolean result = false;
+        try{
+            Scanner input = new Scanner(System.in);
+            System.out.print("Please enter your Password : ");
+            String pass = input.nextLine();
+            if(pass == this.password){
+                setName(newName);
+                result = true;
+            }    
+            else
+                throw new UserException();
+        }
+        catch(UserException e){
+            System.out.println(e.invalidPassword());
+        }
+        return result;
+    }
+    
+    /**
+     * Function to user change his/her mail address
+     * @return true if operation success false otherwise
+     */
+    @Override
+    public boolean changeMailAddress(String newMailAddress){
+        boolean result = false;
+        try{
+            Scanner input = new Scanner(System.in);
+            System.out.print("Please enter your Password : ");
+            String pass = input.nextLine();
+            if(pass == this.password){
+                setMail(newMailAddress);
+                result = true;
+            }    
+            else
+                throw new UserException();
+        }
+        catch(UserException e){
+            System.out.println(e.invalidPassword());
+        }
+        return result;
+    }
+    
+    /**
+     * Function to user change own password
+     * @return true if operation success false otherwise
+     */
+    @Override
+    public boolean changePassword(String newPassword){
+        boolean result = false;
+        try{
+            Scanner input = new Scanner(System.in);
+            System.out.print("Please enter your Password : ");
+            String pass = input.nextLine();
+            if(pass == this.password){
+                password = newPassword;
+                result = true;
+            }    
+            else
+                throw new UserException();
+        }
+        catch(UserException e){
+            System.out.println(e.invalidPassword());
+        }
+        return result;
+    }
     
     
     

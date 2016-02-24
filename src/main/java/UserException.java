@@ -27,15 +27,19 @@ public class UserException extends Exception{
     }
     
     /**
-     * Function that return massage if there is all ready exist 
+     * Function that return massage if there is already exist 
      * @return error string massage
      */
-    public String allreadyExist(){
+    public String alreadyExist(){
         return " is allready exist in this list.";
     }
     
     public String noSuchCourse(){
         return "There is no such course.";
+    }
+    
+    public String invalidPassword(){
+        return "Invalid password!!!";
     }
     
     

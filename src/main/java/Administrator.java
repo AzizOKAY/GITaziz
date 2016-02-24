@@ -64,7 +64,7 @@ class Administrator extends User{
             }
         }
         catch(UserException e){
-            System.out.println(theUser.getName() + e.allreadyExist());
+            System.out.println(theUser.getName() + e.alreadyExist());
         }
         return result;
     }
@@ -111,7 +111,7 @@ class Administrator extends User{
                 this.getCourseList().add(theCourse);
         }
         catch(UserException e){
-            System.out.println("The course" + e.allreadyExist());
+            System.out.println("The course" + e.alreadyExist());
         }
         
         return result;
