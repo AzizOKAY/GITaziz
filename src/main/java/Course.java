@@ -16,8 +16,8 @@ public class Course {
     private String name;
     private String courseID;
     private Teacher courseTeacher;
-    private ArrayList<Tutor> courseTutorList;
-    private ArrayList<Student> studentList;
+    private ArrayList<Tutor> courseTutorList = new ArrayList<Tutor>();
+    private ArrayList<Student> studentList = new ArrayList<Student>();
     
     /**
      * 

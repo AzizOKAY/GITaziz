@@ -53,17 +53,7 @@ class Administrator extends User{
     public boolean addUser(User theUser){
        boolean result = true;
        
-       try{
-           if(getUserList().get(0) == null){
-               getUserList().add(theUser);
-               return true;
-           }
-           else
-               throw new UserException();
-       }
-       catch(UserException e){
-            ;
-        }
+      
         try{
             for(int i = 0; i < getUserList().size(); i++){
                 if(theUser == getUserList().get(i)){

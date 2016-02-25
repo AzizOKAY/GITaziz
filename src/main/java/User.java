@@ -18,7 +18,7 @@ abstract class User implements UserInterface{
     private String id;
     private String mail;
     private String password;
-    private ArrayList<User> userList;
+    private ArrayList<User> userList = new ArrayList<User>();
     
     /**
      * Constructor for user
