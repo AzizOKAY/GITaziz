@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 class Administrator extends User{
     
-    private ArrayList<Course> courseList; 
+    private ArrayList<Course> courseList = new ArrayList<Course>(); 
     /**
      * 
      * @param theName name of user that we define
